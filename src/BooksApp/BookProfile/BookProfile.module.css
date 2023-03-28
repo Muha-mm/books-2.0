@@ -26,8 +26,8 @@
     text-align: center;
     height: 365px;
     grid-area: Im;
-    border-radius: 40px;
-    background-color: #ffba93;
+    border-radius: 10px;
+    background-color: #171717;
 }
 .bookInfo{
     grid-area: bI;
@@ -70,7 +70,7 @@
 }
 
 .bookImage{
-    box-shadow: #1f1f1f 4px 7px 16px;
+    box-shadow: #2f2f2f 4px 7px 16px;
     margin: 28px 0;
     max-width: 220px;
     border-radius: 13px;

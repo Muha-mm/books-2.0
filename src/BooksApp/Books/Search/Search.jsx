@@ -6,7 +6,10 @@ const Search = (props) => {
     return (
         <div className={c.search}>
 
-            <div className={c.title}>Search for books</div>
+            <div className={c.title}>
+                Treasure
+                <div className={c.subtitle}>read. learn. Act</div>
+                 </div>
 
             <form >
                 <textarea placeholder="select a specific category if possible..." required

@@ -1,4 +1,4 @@
-import { createAction, createReducer, createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import {booksAPI} from "../../Api/api";
 
 const initialState = {
@@ -7,7 +7,6 @@ const initialState = {
     sortBy: 'relevance',
     startIndex: 0,
     resultsCount: null,
-    // id: '',
     isFetching: false,
     books: [],
     bookProfile: {}
@@ -53,40 +52,37 @@ const booksSlice = createSlice({
 }) 
 
 export const getBooks = (title_subject, sortBy) => {
-    return (
-        (dispatch) => {
+    return async (dispatch) => {
+        try{
         dispatch(toggleIsFetching(true))
-        booksAPI.getBooks(title_subject, sortBy, 0)
-            .then((response) => {
-                dispatch(toggleIsFetching(false))
-                response.totalItems === 0?
-                    dispatch(setBooks([[], response.totalItems])):
-                    dispatch(setBooks([response.items, response.totalItems]))
-            })
+        let response = await booksAPI.getBooks(title_subject, sortBy, 0)
+        dispatch(toggleIsFetching(false))
+        response.totalItems === 0?
+            dispatch(setBooks([[], response.totalItems])):
+            dispatch(setBooks([response.items, response.totalItems]))
+        } catch(e){dispatch(toggleIsFetching(false)); alert(e)}
     }
-  )
 }
 
 export const getMoreBooks = (title_subject, sortBy, startIndex) => {
-    return (dispatch) => {
+    return async (dispatch) => {
+        try{
         dispatch(toggleIsFetching(true))
-        booksAPI.getBooks(title_subject, sortBy, startIndex + 30)
-            .then((response) => {
-                console.log("do", startIndex)
-                dispatch(toggleIsFetching(false))
-                dispatch(moreBooks(response.items))
-            })
+        let response = await booksAPI.getBooks(title_subject, sortBy, startIndex + 30)
+            dispatch(toggleIsFetching(false))
+            dispatch(moreBooks(response.items))
+        }catch(e){dispatch(toggleIsFetching(false)); alert(e)}
     }
 }
 
 export const getBookProfile = (bookId) => {
-    return (dispatch) => {
+    return async (dispatch) => {
+        try{
         dispatch(toggleIsFetching(true))
-        booksAPI.getBookProfile(bookId)
-            .then((data)=>{
+        let response = await booksAPI.getBookProfile(bookId)
                 dispatch(toggleIsFetching(false))
-                dispatch(setBookProfile(data.volumeInfo))
-            })
+                dispatch(setBookProfile(response.volumeInfo))
+        }catch(e){dispatch(toggleIsFetching(false)); alert(e)}
     }
 }
 

@@ -11,20 +11,18 @@
     width: 220px;
     height: 40px;
     border: none;
-    background: #ffe289;
+    background: #db3376;
     outline: none;
-    color: #cd794b;
+    color: #000000;
     cursor: pointer;
-    border-right: #ffb563 4px solid;
-    border-left: #ffb563 4px solid;
 }
 
 
 
 .loadMoreBooks {
     background-position: center;
-    transition: background 0.3s;
+    transition: background 0.5s;
 }
 .loadMoreBooks:hover {
-    background: #ffb563 radial-gradient(circle, transparent 1%, #ffb563 1%) center/15000%;
+    background: #920d4d
 }
