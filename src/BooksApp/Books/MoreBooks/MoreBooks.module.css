@@ -1,0 +1,30 @@
+.moreBooks{
+    text-align: center;
+    padding: 10px;
+}
+
+.loadMoreBooks {
+    border-radius: 122px;
+    font-family: Montserrat, serif;
+    font-weight: bold;
+    font-size: 17px;
+    width: 220px;
+    height: 40px;
+    border: none;
+    background: #ffe289;
+    outline: none;
+    color: #cd794b;
+    cursor: pointer;
+    border-right: #ffb563 4px solid;
+    border-left: #ffb563 4px solid;
+}
+
+
+
+.loadMoreBooks {
+    background-position: center;
+    transition: background 0.3s;
+}
+.loadMoreBooks:hover {
+    background: #ffb563 radial-gradient(circle, transparent 1%, #ffb563 1%) center/15000%;
+}

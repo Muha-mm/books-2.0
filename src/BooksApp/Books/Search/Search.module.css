@@ -1,0 +1,107 @@
+.search{
+    height: 230px;
+}
+
+.title{
+    font-family: Montserrat, serif;
+    text-align: center;
+    display: block;
+    font-size: 28px;
+    margin: 15px auto;
+    color: #c4523c;
+}
+.search form{
+    width: 520px;
+    margin: 12px auto;
+}
+.search textarea{
+    background: #ffb999;
+    line-height: 30px;
+    padding: 10px;
+    font-family:'Montserrat', Times, serif ;
+    width: 450px;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+}
+
+
+
+.search textarea::-webkit-input-placeholder {
+    opacity: 0.5;
+    font-size: 14px;
+    color: #320000;
+}
+
+.SButton {
+    font-family: Broadway, serif;
+    position: absolute;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #e97f68;
+    outline: none;
+    color: #f3f3f3;
+    cursor: pointer;
+}
+
+.SButton:before {
+    font-size: 20px;
+    color: #3b3b3b;
+}
+.SButton:active{
+    font-size: 15px;
+}
+
+.SButton {
+    background-position: center;
+    transition: background 0.3s;
+}
+.SButton:hover {
+    background: #ff9e36 radial-gradient(circle, transparent 1%, #ff9e36 1%) center/15000%;
+}
+.SButton:active {
+    background-color: #cd4300;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.results{
+    /*color: crimson;*/
+    /*font-family: Glasgow, serif;*/
+    height: 30px;
+    width: 120px;
+    margin: 0 auto;
+    font-family: Montserrat, serif;
+    font-size: 17px;
+    color: #d76767;
+    padding-top: 4px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hr{
+    height: 1px;
+    border: none;
+    width: 520px;
+    background-color: #bababa;
+}
+
+@media (max-width: 510px) {
+    .search textarea{
+        max-width: 200px;
+    }
+    .search form{
+        max-width: 250px;
+    }
+    h1{
+        /*max-width: 230px;*/
+    }
+    .hr{
+        inline-size: 0;
+    }
+}

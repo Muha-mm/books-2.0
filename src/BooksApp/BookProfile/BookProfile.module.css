@@ -1,0 +1,83 @@
+.bookProfileContainer{
+    font-family: Montserrat, serif;
+    display: grid;
+    grid-template-areas:
+    "Im bI";
+    grid-template-columns: 30% 1fr;
+    grid-gap: 2vw;
+    min-height: 366px;
+    max-height: 500px;
+    width: 880px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.pageTitle{
+    text-align: center;
+    margin: 20px auto;
+    width: 380px;
+    color: #404040;
+    font-size: 23px;
+    font-family: Montserrat, serif;
+
+}
+
+.image{
+    text-align: center;
+    height: 365px;
+    grid-area: Im;
+    border-radius: 40px;
+    background-color: #ffba93;
+}
+.bookInfo{
+    grid-area: bI;
+    padding: 20px;
+    max-height: 500px;
+    background-color: #e8ffd0;
+    overflow-y: scroll;
+    word-wrap:break-word
+}
+.title{
+    font-size: 19px;
+    font-weight: bold;
+}
+.authors{
+    margin-top: 8px;
+    color: #242424;
+}
+
+.description{
+    margin-top: 15px;
+}
+
+.bookInfo::-webkit-scrollbar {
+    width: 0.2em;
+    height: 100px;
+}
+
+.bookInfo::-webkit-scrollbar-thumb {
+    background-color: #f5aa99;
+    border-radius: 100px;
+}
+
+
+.categories{
+    padding: 0 5px;
+    border-radius: 10px;
+    background: #ffc4aa;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+.bookImage{
+    box-shadow: #1f1f1f 4px 7px 16px;
+    margin: 28px 0;
+    max-width: 220px;
+    border-radius: 13px;
+    min-height: 305px;
+    max-height: 305px;
+}
+
+.preloader{
+    margin-top: 165px;
+}

@@ -1,0 +1,8 @@
+node_modules
+.dockerignore
+Dockerfile
+.idea
+.git
+
+#dumtgeni/booksapp repo
+#https://hub.docker.com/repository/docker/dumtgeni/booksapp
