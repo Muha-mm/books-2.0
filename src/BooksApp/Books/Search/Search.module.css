@@ -41,7 +41,6 @@
 
 
 .search textarea::-webkit-input-placeholder {
-/* padding-left: 10px; */
     opacity: 0.5;
     font-size: 14px;
     color: #707070;
@@ -49,7 +48,6 @@
 
 .SButton {
     margin-left: 10px;
-    /* border: 1px #4d0020 solid; */
     font-family: Broadway, serif;
     font-size: 20px;
     width: 53px;
@@ -66,7 +64,6 @@
 
 .SButton {
     background-position: center;
-    /* transition: background 0.1s ease-in; */
 }
 .SButton:hover {
     background: #00781c;
@@ -78,15 +75,10 @@
     margin: 13px auto;
     font-family: Montserrat, serif;
     font-size: 17px;
-<<<<<<< HEAD
     color: #c4e2a3;
-=======
-    color: #b7034e;
->>>>>>> 833c235e83159b7400280a00886dae0bc01b0b36
     padding-top: 4px;
     border-radius: 8px;
     text-align: center;
-    /* font-weight: bold; */
 }
 
 .hr{
@@ -110,10 +102,6 @@
         inline-size: 0;
     }
     .preloader{
-<<<<<<< HEAD
         margin-top: 15px;
-=======
-        margin-top: 20px;
->>>>>>> 833c235e83159b7400280a00886dae0bc01b0b36
     }
 }
