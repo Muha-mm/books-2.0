@@ -1,5 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
+
 import {
     changeSearchText,
     setBooks,
@@ -32,6 +33,7 @@ export default function BooksContainer () {
     const changeSearchTextDispatch = (e) => {dispatch(changeSearchText(e.target.value))}
     const selectCategoryDispatch = (e) => {dispatch(selectCategory(e.target.value))}
     const selectSortByDispatch = (e) => {dispatch(selectSortBy(e.target.value))}
+
     // вспомогательная перемменая для корректного запроса (специфика GOOGLE BOOKS API)
     let assetSubject = '';
     
@@ -55,8 +57,15 @@ export default function BooksContainer () {
     }
 
     // возвращаем презентационную компоненту с передачей необходимых для неё данных
-         return   <Books books = {books} resultsCount = {resultsCount} startIndex = {startIndex}
-                         changeSearchText = {changeSearchTextDispatch} isFetching = {isFetching} 
-                         selectSortBy = {selectSortByDispatch} selectCategory = {selectCategoryDispatch}
-                         onButton={onButton} onMoreBooksButton={onMoreBooksButton}/>
+         return   <Books books = {books} 
+                         resultsCount = {resultsCount} 
+                         startIndex = {startIndex}
+                         changeSearchText = {changeSearchTextDispatch} 
+                         isFetching = {isFetching} 
+                         selectSortBy = {selectSortByDispatch} 
+                         selectCategory = {selectCategoryDispatch}
+                         onButton={onButton} 
+                         onMoreBooksButton={onMoreBooksButton}
+                         newBooksText = {newBooksText}
+                         />
     }

@@ -3,7 +3,7 @@
     vertical-align: middle;
     font-family: AlergiaNormal,"Segoe UI","San Francisco",sans-serif;
     padding: 7px;
-    margin: 0 10px 14px 14px;
+    margin: 0 18px 36px 14px;
     max-width: 210px;
     min-height: 315px;
     max-height: 315px;
@@ -19,7 +19,7 @@
 
 .image img{
     max-width: 110px;
-    margin: 10px 10px 50px 50px;
+    margin: 13px 10px 0 50px;
     box-shadow: #121212 10px 10px 15px;
 }
 
@@ -44,7 +44,7 @@
 
 
 .name{
-    color: #f13a7a;
+    color: #e8ffd0;
     padding: 0;
     line-height: 20px;
     width: 197px;

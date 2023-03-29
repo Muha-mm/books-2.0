@@ -26,21 +26,22 @@
     background: #0F0F0F;
     border: solid 1px #9d003f;
     color: #fff;
-    /* border-radius: 40px; */
     border-radius: 100px;
     line-height: 30px;
-    padding: 10px;
+    padding: 7px 15px;
     font-family:'Montserrat', Times, serif ;
     width: 500px;
     height: 30px;
     font-size: 14px;
     outline: none;
     resize: none;
+    overflow-y: hidden;
 }
 
 
 
 .search textarea::-webkit-input-placeholder {
+/* padding-left: 10px; */
     opacity: 0.5;
     font-size: 14px;
     color: #707070;
@@ -48,14 +49,13 @@
 
 .SButton {
     margin-left: 10px;
-    border: 1px #280011 solid;
-    /* border-radius: 0 100px 100px 0; */
+    /* border: 1px #4d0020 solid; */
     font-family: Broadway, serif;
     font-size: 20px;
     width: 53px;
-    height: 51.5px;
-    /* border: none; */
-    background: #151515;
+    height: 45px;
+    border: none;
+    background: #620029;
     color: #f3f3f3;
     cursor: pointer;
 }
@@ -66,31 +66,33 @@
 
 .SButton {
     background-position: center;
-    transition: background 0.3s;
+    /* transition: background 0.1s ease-in; */
 }
 .SButton:hover {
-    background: #2b2b2b;
+    background: #00781c;
 }
 
 .results{
     height: 30px;
     width: 120px;
-    margin: 0 auto;
+    margin: 13px auto;
     font-family: Montserrat, serif;
     font-size: 17px;
-    color: #d76767;
+    color: #c4e2a3;
     padding-top: 4px;
     border-radius: 8px;
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .hr{
     height: 1px;
     border: none;
     width: 520px;
-    background-color: #bababa;
+    background-color: #465633;
 }
+
+
 
 @media (max-width: 510px) {
     .search textarea{
@@ -102,5 +104,8 @@
 
     .hr{
         inline-size: 0;
+    }
+    .preloader{
+        margin-top: 15px;
     }
 }

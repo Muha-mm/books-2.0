@@ -4,7 +4,7 @@
 
 .app{
     margin: 0 auto;
-    max-width: 995px;
+    max-width: 1300px;
 }
 @media (max-width: 1030px) {
     .app{
