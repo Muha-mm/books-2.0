@@ -8,8 +8,10 @@ import booksPng from '../../assets/books.png'
 
 const Books = (props) => {
     let booksElements = props.books.map((b) => {
-        return <Book key={b.id} title={b.volumeInfo.title}
-                     authors={b.volumeInfo.authors} id={b.id}
+        return <Book key={b.id} 
+                     title={b.volumeInfo.title}
+                     authors={b.volumeInfo.authors} 
+                     id={b.id}
                      subject={b.volumeInfo.categories}
                      photo={b.volumeInfo.imageLinks}/>
     })

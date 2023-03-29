@@ -6,22 +6,11 @@
     padding-bottom: 35px;
 }
 
-@media (max-width: 510px) {
-    .selects{
-        padding-bottom: 48px;
-        max-width: 130px;
-    }
-}
+
 
 
 .category{
     float: left;
-}
-.category select option{
-    appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    background-color: black;
 }
 
 .sortBy{
@@ -37,4 +26,14 @@
     height: 25px;
     color: #565656;
     font-family: Corbel, serif;
+}
+
+@media (max-width: 510px) {
+    .selects{
+        padding-bottom: 50px;
+        max-width: 130px;
+    }
+    .category{
+        margin-bottom: 7px;
+    }
 }
