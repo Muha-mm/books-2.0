@@ -78,7 +78,11 @@
     margin: 13px auto;
     font-family: Montserrat, serif;
     font-size: 17px;
+<<<<<<< HEAD
     color: #c4e2a3;
+=======
+    color: #b7034e;
+>>>>>>> 833c235e83159b7400280a00886dae0bc01b0b36
     padding-top: 4px;
     border-radius: 8px;
     text-align: center;
@@ -106,6 +110,10 @@
         inline-size: 0;
     }
     .preloader{
+<<<<<<< HEAD
         margin-top: 15px;
+=======
+        margin-top: 20px;
+>>>>>>> 833c235e83159b7400280a00886dae0bc01b0b36
     }
 }
