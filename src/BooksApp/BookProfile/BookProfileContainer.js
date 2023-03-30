@@ -11,6 +11,7 @@ export default function BookProfileContainer (){
     let dispatch = useDispatch();
     // получаем подробную информацию о книге при загрузке страницы профиля книги
     useEffect(()=>{
+        console.log(params)
         dispatch(getBookProfile(params.id))
     },[])
 

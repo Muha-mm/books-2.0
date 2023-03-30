@@ -3,7 +3,8 @@ import c from './Search.module.css'
 import Selects from "./Selects/Selects";
 import Preloader from "../../../assets/Preloader/Preloader";
 const Search = (props) => {
-    console.log(props)
+    const styles = {border: '1px solid #620029'};
+
     return (
         <div className={c.search}>
 
@@ -12,12 +13,14 @@ const Search = (props) => {
                 <div className={c.subtitle}>read. learn. Act</div>
                  </div>
 
-            <form >
+            <form className={c.form}>
                 <textarea placeholder="select a specific category if possible..." required maxLength={57}
                        onKeyPress={(e)=>
                         {if (e.key === 'Enter'){props.onButton(); e.preventDefault()}}}
                         value={props.newBooksText}
-                        onChange={props.changeSearchText}/>
+                        onChange={props.changeSearchText}
+                        style = {props.resultsCount === 0?styles:null}
+                        />
 
                     <button onClick={props.onButton} type="button" className={c.SButton}> {">"} </button>
             </form>

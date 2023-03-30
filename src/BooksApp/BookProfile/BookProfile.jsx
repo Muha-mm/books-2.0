@@ -16,7 +16,7 @@ const BookProfile = (props) => {
             <img
               className={c.bookImage}
               src={`https://books.google.com/books/content?id=${props.params.id}&printsec=frontcover&img=1&zoom=3&source=gbs_api`}
-              alt={"book Photo"}
+              alt={"book"}
             />
           )}
         </div>

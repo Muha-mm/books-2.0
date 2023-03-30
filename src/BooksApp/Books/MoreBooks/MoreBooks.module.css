@@ -5,24 +5,20 @@
 
 .loadMoreBooks {
     border-radius: 122px;
-    font-family: Montserrat, serif;
-    font-weight: bold;
-    font-size: 17px;
-    width: 220px;
+    font-family: "Montserrat", serif;
+    font-size: 30px;
+    width: 100px;
     height: 40px;
     border: none;
-    background: #db3376;
+    background: #0F0F0F;
+    border: 1px #33db4c solid;
     outline: none;
-    color: #000000;
+    color: #33db4c;
     cursor: pointer;
-}
-
-
-
-.loadMoreBooks {
     background-position: center;
-    transition: background 0.5s;
+    transition: border 0.5s;
 }
-.loadMoreBooks:hover {
-    background: #920d4d
+
+.loadMoreBooks:active {
+    border: 1px #0F0F0F solid;
 }

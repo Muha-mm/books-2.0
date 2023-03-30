@@ -11,9 +11,8 @@ import {
 } from '../../Redux/Reducers/booksReducer';
 import Books from "./Books";
 
-//business logic layer
 export default function BooksContainer () {
-    
+
     // считываем данные state для манипуляций с помощью useDispatch
     const newBooksText = useSelector(state => state.books.newBooksText)
     const subject = useSelector(state => state.books.subject)
@@ -48,6 +47,19 @@ export default function BooksContainer () {
             dispatch (getBooks(title_subject, sortBy))
     }
 
+    //поиск по нажатой категории при нажатии на категорию )
+    const onCategory = (category) => {
+        let subject =',subject:' + category + '}'
+        let title_subject = `{title:${newBooksText}${subject}`
+        dispatch (setBooks([[], null]))
+        
+        newBooksText.trim() === ''?
+            alert('please, enter the title'):
+            dispatch (getBooks(title_subject, sortBy))
+            console.log(title_subject)
+            alert(`searching by title - ${newBooksText}, category - ${category}, sorted by - ${sortBy}` )
+    }
+
     // при клике на кнопку "загрузить больше книг по данному запросу"
     const onMoreBooksButton = () => {
         subject === 'all' ? assetSubject = '}' : assetSubject = ',subject:' + subject + '}'
@@ -67,5 +79,6 @@ export default function BooksContainer () {
                          onButton={onButton} 
                          onMoreBooksButton={onMoreBooksButton}
                          newBooksText = {newBooksText}
+                         onCategory = {onCategory}
                          />
     }

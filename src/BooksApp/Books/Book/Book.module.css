@@ -1,16 +1,27 @@
 .book{
     display: inline-block;
     vertical-align: middle;
-    font-family: AlergiaNormal,"Segoe UI","San Francisco",sans-serif;
+    font-family:"Montserrat", sans-serif;
+    /* font-family: AlergiaNormal,"Segoe UI","San Francisco",sans-serif; */
     padding: 7px;
     margin: 0 18px 36px 14px;
     max-width: 210px;
     min-height: 315px;
-    max-height: 315px;
     background-color: #131313;
-    border-radius: 10px;
+    border-radius: 7px 15px 15px 7px;
+    border-right: 1px rgb(24, 24, 24) solid;
+    border-top: 1px rgb(20, 20, 20) solid;
+    border-bottom: 1px rgb(20, 20, 20) solid;
+    box-shadow: #000000 10px 0px 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.book:hover{
+    transform: translateX(-0.3px);
+    box-shadow: #000000 18px 3px 27px;
+}
 
 .image{
     min-height: 186px;
@@ -18,9 +29,10 @@
 }
 
 .image img{
-    max-width: 110px;
-    margin: 13px 10px 0 50px;
-    box-shadow: #121212 10px 10px 15px;
+    max-width: 120px;
+    max-height: 170px;
+    margin: 13px 10px 0 45px;
+    border-radius: 4px;
 }
 
 
@@ -35,32 +47,41 @@
 
 .author{
     color: #949494;
-    margin-top: 2px;
+    margin-top: 4px;
     max-width: 197px;
-    font-size: 14px;
+    font-size: 11.3px;
     max-height: 40px;
     overflow: hidden;
 }
 
 
 .name{
-    color: #e8ffd0;
-    padding: 0;
+    font-weight: 400;
+    color: #afbaa3;
+    padding: 2px 0;
     line-height: 20px;
     width: 197px;
     margin: 3px 0 0 0 ;
     max-height: 40px;
     overflow: hidden;
-    font-size: 15.8px;
+    font-size: 16.8px;
 }
 .category{
+    font-family: AlergiaNormal,"Segoe UI","San Francisco",sans-serif;
     max-width: 192px;
-    font-size: 12px;
+    font-size: 11px;
     padding: 0 2px;
     display: inline-block;
     border-radius: 10px;
-    border: #a9a9a9 solid 1px;
+    border: #585858  solid 1px;
     margin-bottom: 5px;
-    color: #949494;
+    color: #6d6d6d;
+}
+.category a{
+    color: #6d6d6d;
+}
+
+.category a:hover{
+    color: gold;
 }
 

@@ -7,7 +7,7 @@ let MoreBooks = (props) =>{
             <button
                 onClick={props.onButton}
                 className={c.loadMoreBooks}>
-                more books!
+                +
             </button>
         </div>
     )

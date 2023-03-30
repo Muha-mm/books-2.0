@@ -13,7 +13,9 @@ const Books = (props) => {
                      authors={b.volumeInfo.authors} 
                      id={b.id}
                      subject={b.volumeInfo.categories}
-                     photo={b.volumeInfo.imageLinks}/>
+                     photo={b.volumeInfo.imageLinks}
+                     onCategory = {props.onCategory}
+                     />
     })
 
     return (

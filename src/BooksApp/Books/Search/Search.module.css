@@ -36,8 +36,12 @@
     outline: none;
     resize: none;
     overflow-y: hidden;
+    transition: border 0.3s ease-in-out;
 }
 
+.search textarea:valid {
+    border: solid 1px #00781c;
+}
 
 
 .search textarea::-webkit-input-placeholder {
@@ -56,17 +60,18 @@
     background: #620029;
     color: #f3f3f3;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
 .SButton:active{
-    font-size: 15px;
+    background-color: #02380c;
 }
 
 .SButton {
     background-position: center;
 }
 .SButton:hover {
-    background: #00781c;
+    font-size: 22px;
 }
 
 .results{
@@ -79,6 +84,10 @@
     padding-top: 4px;
     border-radius: 8px;
     text-align: center;
+}
+
+textarea:not(:placeholder-shown) + button{
+    background-color: #00781c;
 }
 
 .hr{

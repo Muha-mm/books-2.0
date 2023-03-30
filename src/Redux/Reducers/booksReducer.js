@@ -19,7 +19,6 @@ const booksSlice = createSlice({
         
         changeSearchText: (state, action)=>{
             state.newBooksText = action.payload;
-            console.log(state.newBooksText)
         },
 
         selectCategory: (state, action)=>{
@@ -43,16 +42,15 @@ const booksSlice = createSlice({
             state.resultsCount = resultsCount;
             state.books = [...books]
         },
-        moreBooks: (state, action)=>{
+        setMoreBooks: (state, action)=>{
             state.startIndex +=30;
-            console.log("posle",state.startIndex);
             state.books.push(...action.payload)
-        }   
+        }, 
     }
 }) 
 
-export const getBooks = (title_subject, sortBy) => {
-    return async (dispatch) => {
+export const getBooks = (title_subject, sortBy) => 
+        async (dispatch) => {
         try{
         dispatch(toggleIsFetching(true))
         let response = await booksAPI.getBooks(title_subject, sortBy, 0)
@@ -62,7 +60,7 @@ export const getBooks = (title_subject, sortBy) => {
             dispatch(setBooks([response.items, response.totalItems]))
         } catch(e){dispatch(toggleIsFetching(false)); alert(e)}
     }
-}
+
 
 export const getMoreBooks = (title_subject, sortBy, startIndex) => {
     return async (dispatch) => {
@@ -70,7 +68,7 @@ export const getMoreBooks = (title_subject, sortBy, startIndex) => {
         dispatch(toggleIsFetching(true))
         let response = await booksAPI.getBooks(title_subject, sortBy, startIndex + 30)
             dispatch(toggleIsFetching(false))
-            dispatch(moreBooks(response.items))
+            dispatch(setMoreBooks(response.items))
         }catch(e){dispatch(toggleIsFetching(false)); alert(e)}
     }
 }
@@ -87,6 +85,6 @@ export const getBookProfile = (bookId) => {
 }
 
 export default booksSlice.reducer
-export const { moreBooks, changeSearchText, setBooks, 
+export const { setMoreBooks, changeSearchText, setBooks, 
     selectCategory, selectSortBy, toggleIsFetching, setBookProfile} = booksSlice.actions
 
